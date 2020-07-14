@@ -10,9 +10,9 @@ services:
             - db
         restart: always
     users-api:
-        image: blindern/users-api
+        image: users-api
         ports: 
-            - "4002:4002"
+            - "4004:4002"
         depends_on: 
             - redis
             - db

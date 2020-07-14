@@ -2,7 +2,7 @@ FROM python:3.7-alpine
 
 ADD ./src /users
 
-WORKDIR /user
+WORKDIR /users
 
 ENV FLASK_APP app.py
 
