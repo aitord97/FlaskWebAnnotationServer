@@ -1,2 +1,2 @@
 # FlaskWebAnnotationServer
-Web annotation server using Flask, postgresSQL, docker and docker-compose
+Web annotation server using Flask, postgresSQL, MongoDB, Redis, docker and docker-compose using microservices
