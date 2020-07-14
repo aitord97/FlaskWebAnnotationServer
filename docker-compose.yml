@@ -1,27 +1,14 @@
 version: '3'
 
 services: 
-    annotation-api:
-        image: annotations-api
-        ports:
-            - "4001:4001"
-        depends_on: 
-            - redis
-            - db
-        restart: always
-    users-api:
-        image: users-api
-        ports: 
-            - "4004:4002"
-        depends_on: 
-            - redis
-            - db
-        restart: always
+    
     redis:
         image: "redis:alpine"
         restart: always
     db:
         image: "postgres:alpine"
+        ports: 
+            - "5432:5432"
         environment: 
             POSTGRES_PASSWORD: "admin"
             POSTGRES_DB: "annotations-db"
