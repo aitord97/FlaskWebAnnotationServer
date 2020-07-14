@@ -6,7 +6,7 @@ def dbCursor () :
         connection = psycopg2.connect(
             user = "postgres",
             password = "admin",
-            host = "0.0.0.0",
+            host = "db",
             port = "5432",
             database = "annotations-db")
         return connection, connection.cursor()

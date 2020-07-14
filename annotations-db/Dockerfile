@@ -8,12 +8,12 @@ ENV FLASK_APP app.py
 
 ENV FLASK_RUN_HOST 0.0.0.0
 
-RUN apk update && apk add --no-cache gcc musl-dev linux-headers postgresql-dev
+RUN apk update && apk add --no-cache gcc musl-dev linux-headers
 
-RUN pip install psycopg2-binary
+RUN pip3 install pymongo
 
 COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "app.py" ]
+CMD [ "python3", "app.py" ]
